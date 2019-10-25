@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+
 
 class BabySitterSignUpViewController: UIViewController {
 
@@ -47,6 +50,9 @@ class BabySitterSignUpViewController: UIViewController {
     func setUpElements()
     {
         ErrorLabel.alpha=0
+        
+        Utilities.styleTextField(FullNameTextField)
+        Utilities.styleTextField(MobileTextField)
         Utilities.styleTextField(FullNameTextField)
         Utilities.styleTextField(MobileTextField)
         Utilities.styleTextField(EmailTextField)
@@ -68,8 +74,79 @@ class BabySitterSignUpViewController: UIViewController {
     }
     */
     
-    @IBAction func SubmitAction(_ sender: Any) {
+    func showError(_ message:String)
+    {
+        ErrorLabel.text=message
+        ErrorLabel.alpha=1
     }
+    func transitionToHome()
+    {
+        //storyboard?.instantiateViewController(withIdentifier: HomeVC)
+        //storyboard?.instantiateInitialViewController(HomeVC)
+    }
+    //Validate Fields
+    func  validateFields()->String?
+    {
+        if FullNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" || EmailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||MobileTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||AgeTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||EduTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" || PasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""||ConfirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""
+        {
+            return "Please fill in all fields"
+        }
+        let checkpassword = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isPasswordValid(checkpassword)==false{
+            return "Please Ensure your password is at least 8 characters , contains one special character and a number"
+        }
+       /* if Utilities.isPasswordValid ( checkpassword )==false
+        {
+            return "Please Ensure your password is at least 8 characters , contains one special character and a number"
+        }*/
+        return nil
+    }
+    
+    @IBAction func SubmitAction(_ sender: Any) {
+        let error = validateFields()
+        if error != nil{
+            showError(error!)
+        }
+        else
+        {
+            //create data
+            let name=FullNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let mobile = MobileTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let age = AgeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let edu = EduTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let gender=gd
+            let password=PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+                if err != nil {
+                    self.showError("Error in creating user")
+                }
+                else
+                {
+                    let db = Firestore.firestore()
+                    
+                    //db.collection("users").addDocument(data: ["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"password":password,"uid":result!.user.uid],
+                    
+                    db.collection("users").addDocument(data:  ["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"password":password,"uid":result!.user.uid], completion: { (error) in
+                        
+                        if error != nil{
+                            self.showError("Error saving User data.")
+                        }
+                    })
+                    
+                    
+                    //Transition to home
+                    self.transitionToHome()
+                    
+                    
+                        
+                }
+            }
+        }
+    }
+    
+
     
     
     //Gender Selection Action
@@ -102,6 +179,17 @@ class BabySitterSignUpViewController: UIViewController {
         default:
             gd="Male"
         }
+        GenderButton.forEach{
+            (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+               if(!button.isHidden)
+               {
+                button.isHidden=true
+               }
+                self.view.layoutIfNeeded()
+            })
+        }
+        
     }
     
     /*
