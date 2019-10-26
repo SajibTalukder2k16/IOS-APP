@@ -81,6 +81,9 @@ class BabySitterSignUpViewController: UIViewController {
     }
     func transitionToHome()
     {
+       let logInViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.logInViewController ) as? BabySitterLogInViewController
+        view.window?.rootViewController = logInViewController
+        view.window?.makeKeyAndVisible()
         //storyboard?.instantiateViewController(withIdentifier: HomeVC)
         //storyboard?.instantiateInitialViewController(HomeVC)
     }
@@ -92,6 +95,11 @@ class BabySitterSignUpViewController: UIViewController {
             return "Please fill in all fields"
         }
         let checkpassword = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let confirmpass=ConfirmPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if checkpassword != confirmpass
+        {
+            return "Password not matched"
+        }
         if Utilities.isPasswordValid(checkpassword)==false{
             return "Please Ensure your password is at least 8 characters , contains one special character and a number"
         }
@@ -117,6 +125,7 @@ class BabySitterSignUpViewController: UIViewController {
             let edu = EduTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let gender=gd
             let password=PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 if err != nil {
@@ -179,14 +188,14 @@ class BabySitterSignUpViewController: UIViewController {
         default:
             gd="Male"
         }
-        GenderButton.forEach{
+       GenderButton.forEach{
             (button) in
             UIView.animate(withDuration: 0.3, animations: {
                if(!button.isHidden)
                {
                 button.isHidden=true
                }
-                self.view.layoutIfNeeded()
+               // self.view.layoutIfNeeded()
             })
         }
         

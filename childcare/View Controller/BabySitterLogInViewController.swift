@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class BabySitterLogInViewController: UIViewController {
 
@@ -54,6 +55,23 @@ class BabySitterLogInViewController: UIViewController {
     }
     
     @IBAction func LogInAction(_ sender: Any) {
+        let email=EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let pass=PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        Auth.auth().signIn(withEmail: email, password: pass) { (result, error) in
+            if error != nil {
+                self.ErrorLabel.text = error!.localizedDescription
+                self.ErrorLabel.alpha = 1
+            }
+            else
+            {
+                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
+                //let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController ) as? HomeViewController
+                self.view.window?.rootViewController = homeViewController
+                self.view.window?.makeKeyAndVisible()
+                //view.window?.rootViewController = homeViewController
+                //view.window?.makeKeyAndVisible()
+            }
+        }
     }
     
 }

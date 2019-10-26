@@ -14,6 +14,7 @@
 		0723AEEE235F2CC100B19AC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0723AEEC235F2CC100B19AC2 /* LaunchScreen.storyboard */; };
 		0723AEF6235F2DE600B19AC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0723AEF5235F2DE600B19AC2 /* GoogleService-Info.plist */; };
 		072A8C0B2362D5580000524F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A8C0A2362D5580000524F /* Utilities.swift */; };
+		07358CDD23642A4C003065B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07358CDC23642A4C003065B0 /* Constants.swift */; };
 		07AAF3622360B03300899A96 /* GuardianSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF3612360B03300899A96 /* GuardianSignUpViewController.swift */; };
 		07AAF3662360B09900899A96 /* BabySitterSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF3652360B09900899A96 /* BabySitterSignUpViewController.swift */; };
 		07AAF3682360B0EA00899A96 /* BabySitterLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF3672360B0EA00899A96 /* BabySitterLogInViewController.swift */; };
@@ -32,6 +33,7 @@
 		0723AEEF235F2CC100B19AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0723AEF5235F2DE600B19AC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		072A8C0A2362D5580000524F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		07358CDC23642A4C003065B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		07AAF3612360B03300899A96 /* GuardianSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianSignUpViewController.swift; sourceTree = "<group>"; };
 		07AAF3652360B09900899A96 /* BabySitterSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterSignUpViewController.swift; sourceTree = "<group>"; };
 		07AAF3672360B0EA00899A96 /* BabySitterLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterLogInViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				072A8C0A2362D5580000524F /* Utilities.swift */,
+				07358CDC23642A4C003065B0 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				07AAF36C2360B1AF00899A96 /* HomeViewController.swift in Sources */,
 				072A8C0B2362D5580000524F /* Utilities.swift in Sources */,
 				0723AEE4235F2CBB00B19AC2 /* AppDelegate.swift in Sources */,
+				07358CDD23642A4C003065B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
