@@ -38,7 +38,13 @@ class BabySitterSignUpViewController: UIViewController {
     
     @IBOutlet weak var ErrorLabel: UILabel!
     
+    @IBOutlet weak var RegisterType: UILabel!
+    
+    @IBOutlet weak var BabyAge: UITextField!
+    @IBOutlet weak var BabyName: UITextField!
+    
     var gd="Male"
+    var usertype="BabySitter"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +56,8 @@ class BabySitterSignUpViewController: UIViewController {
     func setUpElements()
     {
         ErrorLabel.alpha=0
-        
+        RegisterType.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
+        RegisterType.textColor = UIColor.white
         Utilities.styleTextField(FullNameTextField)
         Utilities.styleTextField(MobileTextField)
         Utilities.styleTextField(FullNameTextField)
@@ -58,9 +65,12 @@ class BabySitterSignUpViewController: UIViewController {
         Utilities.styleTextField(EmailTextField)
         Utilities.styleTextField(AgeTextField)
         Utilities.styleTextField(EduTextField)
+        Utilities.styleTextField(BabyName)
+        Utilities.styleTextField(BabyAge)
         Utilities.styleTextField(PasswordTextField)
         Utilities.styleTextField(ConfirmPasswordTextField)
         Utilities.styleFilledButton(SubmitButton)
+        RegisterType.layer.cornerRadius=10
         
     }
 
@@ -73,6 +83,29 @@ class BabySitterSignUpViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    //Switch Action
+    
+    @IBAction func ToggleAction(_ sender: UISwitch) {
+        if(sender.isOn==true)
+        {
+            RegisterType.text="Register as BabySitter (Tap To change)"
+            //RegisterType.backgroundColor = UIColor.init(red: 208, green: 222, blue: 10, alpha: 1)
+            RegisterType.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
+            RegisterType.textColor = UIColor.white
+            BabyName.isHidden=true;
+            BabyAge.isHidden=true;
+        }
+        else{
+            RegisterType.text="Register as Guardian (Tap To change)"
+            //RegisterType.backgroundColor = UIColor.white
+            RegisterType.backgroundColor = UIColor.white
+            RegisterType.textColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
+            BabyName.isHidden=false;
+            BabyAge.isHidden=false;
+            usertype="Guardian"
+        }
+    }
+    //Switch Action
     
     func showError(_ message:String)
     {
@@ -103,6 +136,10 @@ class BabySitterSignUpViewController: UIViewController {
         if Utilities.isPasswordValid(checkpassword)==false{
             return "Please Ensure your password is at least 8 characters , contains one special character and a number"
         }
+        if (usertype=="Guardian" && (BabyName.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" || BabyAge.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""))
+        {
+            return "Please fill in all fields"
+        }
        /* if Utilities.isPasswordValid ( checkpassword )==false
         {
             return "Please Ensure your password is at least 8 characters , contains one special character and a number"
@@ -125,7 +162,9 @@ class BabySitterSignUpViewController: UIViewController {
             let edu = EduTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let gender=gd
             let password=PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
+            let utype = usertype
+            let babyname=BabyName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let babyage = BabyAge.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 if err != nil {
@@ -136,14 +175,24 @@ class BabySitterSignUpViewController: UIViewController {
                     let db = Firestore.firestore()
                     
                     //db.collection("users").addDocument(data: ["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"password":password,"uid":result!.user.uid],
-                    
-                    db.collection("users").addDocument(data:  ["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"password":password,"uid":result!.user.uid], completion: { (error) in
+                    if(utype=="BabySitter")
+                    {
+                        
+                        db.collection("users").addDocument(data:  ["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype, "password":password,"uid":result!.user.uid], completion: { (error) in
                         
                         if error != nil{
                             self.showError("Error saving User data.")
                         }
                     })
-                    
+                    }
+                    else
+                    {
+                        db.collection("users").addDocument(data:  ["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype , "BabyName":babyname,"BabyAge":babyage, "password":password,"uid":result!.user.uid], completion: { (error) in
+                            if error != nil{
+                                self.showError("Error saving User data.")
+                            }
+                        })
+                    }
                     
                     //Transition to home
                     self.transitionToHome()
