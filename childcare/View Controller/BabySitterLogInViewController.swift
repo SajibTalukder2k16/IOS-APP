@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class BabySitterLogInViewController: UIViewController {
 
+    @IBOutlet weak var GuestModeButton: UIButton!
     
     @IBOutlet weak var EmailTextField: UITextField!
     
@@ -49,6 +50,7 @@ class BabySitterLogInViewController: UIViewController {
         Utilities.styleTextField(PasswordTextField)
         Utilities.styleFilledButton(LogInButton)
         Utilities.styleFilledButton(CreateAccountButton)
+        Utilities.styleFilledButton(GuestModeButton)
        // Utilities.styleTextField(ConfirmPasswordTextField)
        // Utilities.styleFilledButton(SubmitButton)
         

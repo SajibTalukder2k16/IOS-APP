@@ -9,11 +9,13 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import QuartzCore
 
 
 class BabySitterSignUpViewController: UIViewController {
 
     
+    @IBOutlet weak var BackButton: UIButton!
     //Gender Selection Button
     
     @IBOutlet var GenderButton: [UIButton]!
@@ -70,7 +72,9 @@ class BabySitterSignUpViewController: UIViewController {
         Utilities.styleTextField(PasswordTextField)
         Utilities.styleTextField(ConfirmPasswordTextField)
         Utilities.styleFilledButton(SubmitButton)
-        RegisterType.layer.cornerRadius=10
+        RegisterType.layer.cornerRadius = 15
+        BackButton.layer.cornerRadius = 15
+        RegisterType.layer.masksToBounds = true
         
     }
 
@@ -91,6 +95,7 @@ class BabySitterSignUpViewController: UIViewController {
             RegisterType.text="Register as BabySitter (Tap To change)"
             //RegisterType.backgroundColor = UIColor.init(red: 208, green: 222, blue: 10, alpha: 1)
             RegisterType.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
+            RegisterType.layer.cornerRadius = 30
             RegisterType.textColor = UIColor.white
             BabyName.isHidden=true;
             BabyAge.isHidden=true;
@@ -99,6 +104,7 @@ class BabySitterSignUpViewController: UIViewController {
             RegisterType.text="Register as Guardian (Tap To change)"
             //RegisterType.backgroundColor = UIColor.white
             RegisterType.backgroundColor = UIColor.white
+            RegisterType.layer.cornerRadius = 30
             RegisterType.textColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
             BabyName.isHidden=false;
             BabyAge.isHidden=false;

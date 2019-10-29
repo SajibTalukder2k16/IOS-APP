@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07182235236881B9004C602D /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07182234236881B9004C602D /* AboutUsViewController.swift */; };
 		0723AEE4235F2CBB00B19AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723AEE3235F2CBB00B19AC2 /* AppDelegate.swift */; };
 		0723AEE6235F2CBB00B19AC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723AEE5235F2CBB00B19AC2 /* ViewController.swift */; };
 		0723AEE9235F2CBB00B19AC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0723AEE7235F2CBB00B19AC2 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07182234236881B9004C602D /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		0723AEE0235F2CBB00B19AC2 /* childcare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = childcare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0723AEE3235F2CBB00B19AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0723AEE5235F2CBB00B19AC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		07AAF36D2360B1B900899A96 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				07182234236881B9004C602D /* AboutUsViewController.swift */,
 				07AAF3612360B03300899A96 /* GuardianSignUpViewController.swift */,
 				07AAF3652360B09900899A96 /* BabySitterSignUpViewController.swift */,
 				07AAF3672360B0EA00899A96 /* BabySitterLogInViewController.swift */,
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07182235236881B9004C602D /* AboutUsViewController.swift in Sources */,
 				0723AEE6235F2CBB00B19AC2 /* ViewController.swift in Sources */,
 				07AAF3622360B03300899A96 /* GuardianSignUpViewController.swift in Sources */,
 				07AAF3662360B09900899A96 /* BabySitterSignUpViewController.swift in Sources */,
