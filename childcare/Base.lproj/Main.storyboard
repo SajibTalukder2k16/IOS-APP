@@ -312,8 +312,17 @@
                                     <segue destination="l1n-YV-q88" kind="show" id="das-Sr-zqO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocj-4O-10e">
+                                <rect key="frame" x="0.0" y="103" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="jPL-xL-rxr"/>
+                                    <constraint firstAttribute="width" constant="150" id="zfs-bZ-a1f"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="profile"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seg-mX-AOQ">
-                                <rect key="frame" x="132" y="656" width="150" height="150"/>
+                                <rect key="frame" x="139" y="602" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="LUu-i2-j2I"/>
@@ -325,14 +334,98 @@
                                     <segue destination="enU-1L-IQQ" kind="show" id="b1F-Mh-onz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBd-N0-puh">
+                                <rect key="frame" x="0.0" y="409" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="isL-mH-jra"/>
+                                    <constraint firstAttribute="width" constant="150" id="oxF-II-WEu"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="historynew"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7M-Ob-xyX">
+                                <rect key="frame" x="222" y="355" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="PJz-Rz-yuR"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="tyB-NE-ETL"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="toprated"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1le-WS-I7z">
+                                <rect key="frame" x="277" y="333" width="110" height="26"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-Vc-aY6">
+                                <rect key="frame" x="94" y="540" width="88" height="66"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Rated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOF-ey-n0B">
+                                <rect key="frame" x="257" y="577" width="137" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="e0x-vv-xAw"/>
+                                    <constraint firstAttribute="width" constant="137" id="mbz-s3-ehM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Developers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTf-kd-8FH">
+                                <rect key="frame" x="146" y="772" width="137" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ll-eH-KRU">
+                                <rect key="frame" x="222" y="139" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Qes-Yp-p6Y"/>
+                                    <constraint firstAttribute="width" constant="150" id="jVL-jC-mrz"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="search"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YY-Yf-B5Q">
+                                <rect key="frame" x="72" y="295" width="78" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="7pT-X8-1EX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.86174303756476678" green="0.65073428056379123" blue="0.029101668779044004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iOF-ey-n0B" firstAttribute="top" secondItem="P7M-Ob-xyX" secondAttribute="bottom" constant="60" id="3hr-O3-FW2"/>
+                            <constraint firstItem="3ll-eH-KRU" firstAttribute="top" secondItem="ocj-4O-10e" secondAttribute="top" id="3mw-WT-sOZ"/>
+                            <constraint firstItem="Bg2-Vc-aY6" firstAttribute="leading" secondItem="7Id-G2-8vE" secondAttribute="leading" constant="94" id="4IE-Nu-HAf"/>
+                            <constraint firstItem="uBd-N0-puh" firstAttribute="top" secondItem="ocj-4O-10e" secondAttribute="bottom" constant="75" id="6g6-fP-xxN"/>
+                            <constraint firstItem="3ll-eH-KRU" firstAttribute="firstBaseline" secondItem="ocj-4O-10e" secondAttribute="firstBaseline" id="8xg-z6-jgF"/>
                             <constraint firstItem="7Id-G2-8vE" firstAttribute="bottom" secondItem="L7v-8S-kCx" secondAttribute="bottom" constant="791" id="9nW-F3-qwi"/>
+                            <constraint firstItem="P7M-Ob-xyX" firstAttribute="top" secondItem="1le-WS-I7z" secondAttribute="bottom" constant="8" symbolic="YES" id="GPK-jg-Zk3"/>
+                            <constraint firstItem="ocj-4O-10e" firstAttribute="leading" secondItem="7Id-G2-8vE" secondAttribute="leading" constant="60" id="HiZ-lW-7XN"/>
                             <constraint firstItem="seg-mX-AOQ" firstAttribute="top" secondItem="7Id-G2-8vE" secondAttribute="top" constant="570" id="J8K-7U-6WX"/>
+                            <constraint firstItem="ocj-4O-10e" firstAttribute="top" secondItem="L7v-8S-kCx" secondAttribute="bottom" constant="86" id="JW8-yq-4SY"/>
+                            <constraint firstItem="uBd-N0-puh" firstAttribute="top" secondItem="4YY-Yf-B5Q" secondAttribute="bottom" constant="23" id="Jih-TD-nAl"/>
                             <constraint firstItem="L7v-8S-kCx" firstAttribute="leading" secondItem="Xbi-ZI-pDc" secondAttribute="leadingMargin" id="LlX-Av-9Yi"/>
+                            <constraint firstItem="iOF-ey-n0B" firstAttribute="leading" secondItem="Bg2-Vc-aY6" secondAttribute="trailing" constant="75" id="Ozu-ao-Qgo"/>
+                            <constraint firstItem="Bg2-Vc-aY6" firstAttribute="trailing" secondItem="4YY-Yf-B5Q" secondAttribute="trailing" id="Qe9-DV-xBM"/>
+                            <constraint firstItem="Bg2-Vc-aY6" firstAttribute="top" secondItem="uBd-N0-puh" secondAttribute="bottom" constant="8" symbolic="YES" id="S7u-o4-t2v"/>
                             <constraint firstItem="L7v-8S-kCx" firstAttribute="top" secondItem="7Id-G2-8vE" secondAttribute="top" id="UVX-m1-nYi"/>
+                            <constraint firstItem="iOF-ey-n0B" firstAttribute="trailing" secondItem="Xbi-ZI-pDc" secondAttribute="trailingMargin" id="UdP-31-Ibc"/>
+                            <constraint firstItem="P7M-Ob-xyX" firstAttribute="leading" secondItem="3ll-eH-KRU" secondAttribute="leading" id="Xhp-I6-jur"/>
+                            <constraint firstItem="uBd-N0-puh" firstAttribute="leading" secondItem="ocj-4O-10e" secondAttribute="leading" id="bce-av-NCt"/>
+                            <constraint firstItem="seg-mX-AOQ" firstAttribute="top" secondItem="Bg2-Vc-aY6" secondAttribute="bottom" constant="8" symbolic="YES" id="hxa-2m-4SA"/>
                             <constraint firstItem="seg-mX-AOQ" firstAttribute="centerX" secondItem="Xbi-ZI-pDc" secondAttribute="centerX" id="kon-9B-rPF"/>
+                            <constraint firstItem="1le-WS-I7z" firstAttribute="leading" secondItem="4YY-Yf-B5Q" secondAttribute="trailing" constant="95" id="mQk-tL-3Vh"/>
+                            <constraint firstItem="seg-mX-AOQ" firstAttribute="top" secondItem="iOF-ey-n0B" secondAttribute="bottom" constant="10" id="mmR-d6-v5J"/>
+                            <constraint firstItem="3ll-eH-KRU" firstAttribute="leading" secondItem="ocj-4O-10e" secondAttribute="trailing" constant="39" id="tcM-sC-n44"/>
                             <constraint firstItem="7Id-G2-8vE" firstAttribute="trailing" secondItem="L7v-8S-kCx" secondAttribute="trailing" constant="334" id="yGy-Ek-MsO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7Id-G2-8vE"/>
@@ -340,6 +433,10 @@
                     <connections>
                         <outlet property="AboutUsButton" destination="seg-mX-AOQ" id="q9j-Zq-fE0"/>
                         <outlet property="BackButton" destination="L7v-8S-kCx" id="neC-mR-BXx"/>
+                        <outlet property="FindNowButton" destination="3ll-eH-KRU" id="mI3-g4-lxB"/>
+                        <outlet property="HistoryButton" destination="uBd-N0-puh" id="UlX-1y-sgS"/>
+                        <outlet property="ProfileButton" destination="ocj-4O-10e" id="Zzn-t3-8hJ"/>
+                        <outlet property="TopRatedButton" destination="P7M-Ob-xyX" id="M7V-mf-Dso"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7Q-W1-Ang" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,10 +463,17 @@
                                     <segue destination="aEX-iX-9KS" kind="show" id="Bc3-rL-6Am"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IxU-Yj-HPS">
+                                <rect key="frame" x="87" y="115" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.42673050298331811" green="0.48300908765700989" blue="0.48892891839378239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="x5G-38-ivw"/>
                     </view>
+                    <connections>
+                        <outlet property="JsonImageOne" destination="IxU-Yj-HPS" id="efw-nK-ubH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gs-sd-g3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -500,6 +604,10 @@
     </scenes>
     <resources>
         <image name="aboutUsimage" width="512" height="512"/>
+        <image name="historynew" width="512" height="512"/>
+        <image name="profile" width="512" height="512"/>
+        <image name="search" width="512" height="512"/>
+        <image name="toprated" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="das-Sr-zqO"/>
