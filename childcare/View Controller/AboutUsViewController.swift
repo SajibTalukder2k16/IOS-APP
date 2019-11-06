@@ -10,14 +10,19 @@ import UIKit
 
 class AboutUsViewController: UIViewController {
 
-    @IBOutlet weak var JsonImageOne: UIImageView!
+    @IBOutlet weak var SajibImageView: UIImageView!
     override func viewDidLoad() {
+        
+        SajibImageView.layer.cornerRadius = SajibImageView.frame.size.width/2
+        SajibImageView.clipsToBounds = true
+        SajibImageView.layer.borderColor = UIColor.black.cgColor
+        SajibImageView.layer.borderWidth = 4
         super.viewDidLoad()
-        let imageURL=URL(string: "https://gocity.com/new-york/sites/g/files/ufrfmb171/files/styles/tile/public/New-York-skyline_0.jpg?itok=QGe7h8G3")!
+        let imageURL=URL(string: "https://tinyurl.com/talukdersajib")!
         let task=URLSession.shared.dataTask(with:imageURL){(data,response,error)in
             if error==nil{
                 let loadImage=UIImage(data:data!)
-                self.JsonImageOne.image=loadImage
+                self.SajibImageView.image=loadImage
             }
         }
         task.resume()
@@ -28,16 +33,4 @@ class AboutUsViewController: UIViewController {
     }
 
    // Do any additional setup after loading the view.
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
