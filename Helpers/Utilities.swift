@@ -50,5 +50,12 @@ class Utilities {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
     }
+    static func imageStyle(_ img : UIImageView)
+    {
+        img.layer.cornerRadius = img.frame.size.width/2
+        img.clipsToBounds = true
+        img.layer.borderColor = UIColor.black.cgColor
+        img.layer.borderWidth = 4
+    }
     
 }
