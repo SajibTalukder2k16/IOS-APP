@@ -117,6 +117,7 @@ class BabySitterSignUpViewController: UIViewController {
     {
         ErrorLabel.text=message
         ErrorLabel.alpha=1
+
     }
     func transitionToHome()
     {
@@ -153,7 +154,7 @@ class BabySitterSignUpViewController: UIViewController {
         return nil
     }
     
-    @IBAction func SubmitAction(_ sender: Any) {
+    @IBAction func SubmitAction(_ sender: UIButton) {
         let error = validateFields()
         if error != nil{
             showError(error!)
@@ -179,9 +180,47 @@ class BabySitterSignUpViewController: UIViewController {
                 else
                 {
                     let db = Firestore.firestore()
+                    let newdoc = db.collection("users").document(email)
+                       // newdoc.setData(["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype, "password":password,"uid":newdoc.documentID])
+                    if(utype=="BabySitter")
+                    {
+                    newdoc.setData(["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype, "password":password,"uid":newdoc.documentID] , completion: { (error) in
+                        if error != nil{
+                            self.showError("Error saving User data.")
+                        }
+                        else
+                        {
+                             self.transitionToHome()
+                        }
+                    })
+                    }
+                    else
+                    {
+                        newdoc.setData(["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype , "BabyName":babyname,"BabyAge":babyage, "password":password,"uid":newdoc.documentID], completion: { (error) in
+                            if error != nil{
+                                self.showError("Error saving User data.")
+                            }
+                            else
+                            {
+                                self.transitionToHome()
+                            }
+                        })
+                    }
+                    
+                    
+                   /* db.collection("users").addDocument(data:  ["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype, "password":password,"uid":result!.user.uid], completion: { (error) in
+                        
+                        if error != nil{
+                            self.showError("Error saving User data.")
+                        }
+                        else
+                        {
+                            self.transitionToHome()
+                        }
+ */
                     
                     //db.collection("users").addDocument(data: ["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"password":password,"uid":result!.user.uid],
-                    if(utype=="BabySitter")
+                    /*if(utype=="BabySitter")
                     {
                         
                         db.collection("users").addDocument(data:  ["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype, "password":password,"uid":result!.user.uid], completion: { (error) in
@@ -201,7 +240,7 @@ class BabySitterSignUpViewController: UIViewController {
                     }
                     
                     //Transition to home
-                    self.transitionToHome()
+                    self.transitionToHome()*/
                     
                     
                         

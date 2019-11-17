@@ -23,8 +23,13 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var TopRatedButton: UIButton!
     
+    var userdocid = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //print("Sajib Talukder")
+        //print(userdocid)
         BackButton.layer.cornerRadius = 15
         AboutUsButton.layer.cornerRadius = 30
         AboutUsButton.layer.cornerRadius =  AboutUsButton.frame.size.width / 2
@@ -66,9 +71,15 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "seguepro")
+        {
+        let profilecontroller = segue.destination as! ProfileViewController
+        profilecontroller.userdocid = userdocid
+        }
+    }
     @IBAction func AboutUsAction(_ sender: UIButton) {
-        
+        self.performSegue(withIdentifier: "seguepro", sender: "self")
     }
     /*
     // MARK: - Navigation

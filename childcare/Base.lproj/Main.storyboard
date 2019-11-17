@@ -293,6 +293,34 @@
             </objects>
             <point key="canvasLocation" x="931.88405797101461" y="-218.30357142857142"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="oO9-yw-OWn">
+            <objects>
+                <viewController id="3Ir-nH-2Y0" customClass="ProfileViewController" customModule="childcare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ddO-Ey-3hJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxP-xI-bET">
+                                <rect key="frame" x="76" y="193" width="262" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86174303760000004" green="0.65073428060000005" blue="0.029101668779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Anb-7k-RmO"/>
+                    </view>
+                    <connections>
+                        <outlet property="EmailLabel" destination="bxP-xI-bET" id="cKb-X0-JHU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cI3-XS-ISH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4456.521739130435" y="-150"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="4sX-cu-D3Q">
             <objects>
@@ -320,6 +348,9 @@
                                     <constraint firstAttribute="width" constant="150" id="zfs-bZ-a1f"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="profile"/>
+                                <connections>
+                                    <segue destination="3Ir-nH-2Y0" kind="show" identifier="seguepro" id="y8g-Xi-5Nl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seg-mX-AOQ">
                                 <rect key="frame" x="139" y="602" width="150" height="150"/>
@@ -442,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7Q-W1-Ang" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2644.9275362318845" y="11.383928571428571"/>
+            <point key="canvasLocation" x="2690" y="57"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="HbK-Zx-UXq">
@@ -655,6 +686,7 @@
                                         </state>
                                         <connections>
                                             <action selector="LogInAction:" destination="l1n-YV-q88" eventType="touchUpInside" id="Um9-6y-khI"/>
+                                            <segue destination="aEX-iX-9KS" kind="show" identifier="seguecheck" id="U8m-xc-cnC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofA-tu-nm7">
@@ -663,7 +695,7 @@
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                         <state key="normal" title="Create An Account"/>
                                         <connections>
-                                            <segue destination="uuU-z9-0dg" kind="show" id="uno-2Y-zFD"/>
+                                            <segue destination="uuU-z9-0dg" kind="show" identifier="goregi" id="uno-2Y-zFD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1n-hF-q19">
@@ -672,7 +704,7 @@
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                         <state key="normal" title="Guest Mode"/>
                                         <connections>
-                                            <segue destination="aEX-iX-9KS" kind="show" id="AyH-wa-neP"/>
+                                            <segue destination="aEX-iX-9KS" kind="show" identifier="gohome" id="AyH-wa-neP"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXd-Mq-WvU">
@@ -709,7 +741,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gx8-4N-5dU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721.7391304347827" y="439.95535714285711"/>
+            <point key="canvasLocation" x="1761" y="251"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9YY-l5-ftb">
@@ -738,6 +770,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="das-Sr-zqO"/>
-        <segue reference="3EK-rG-1Ch"/>
+        <segue reference="U8m-xc-cnC"/>
     </inferredMetricsTieBreakers>
 </document>

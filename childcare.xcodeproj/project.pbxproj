@@ -16,10 +16,9 @@
 		0723AEF6235F2DE600B19AC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0723AEF5235F2DE600B19AC2 /* GoogleService-Info.plist */; };
 		072A8C0B2362D5580000524F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A8C0A2362D5580000524F /* Utilities.swift */; };
 		07358CDD23642A4C003065B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07358CDC23642A4C003065B0 /* Constants.swift */; };
-		07AAF3622360B03300899A96 /* GuardianSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF3612360B03300899A96 /* GuardianSignUpViewController.swift */; };
+		075462D223815C4900D1511D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075462D123815C4900D1511D /* ProfileViewController.swift */; };
 		07AAF3662360B09900899A96 /* BabySitterSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF3652360B09900899A96 /* BabySitterSignUpViewController.swift */; };
 		07AAF3682360B0EA00899A96 /* BabySitterLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF3672360B0EA00899A96 /* BabySitterLogInViewController.swift */; };
-		07AAF36A2360B12C00899A96 /* GuardianLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF3692360B12C00899A96 /* GuardianLogInViewController.swift */; };
 		07AAF36C2360B1AF00899A96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF36B2360B1AF00899A96 /* HomeViewController.swift */; };
 		5CD6FA4C9FBAC24C62160348 /* Pods_childcare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF06B6767740CA430FAA382 /* Pods_childcare.framework */; };
 /* End PBXBuildFile section */
@@ -36,10 +35,9 @@
 		0723AEF5235F2DE600B19AC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		072A8C0A2362D5580000524F /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		07358CDC23642A4C003065B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		07AAF3612360B03300899A96 /* GuardianSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianSignUpViewController.swift; sourceTree = "<group>"; };
+		075462D123815C4900D1511D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		07AAF3652360B09900899A96 /* BabySitterSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterSignUpViewController.swift; sourceTree = "<group>"; };
 		07AAF3672360B0EA00899A96 /* BabySitterLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterLogInViewController.swift; sourceTree = "<group>"; };
-		07AAF3692360B12C00899A96 /* GuardianLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianLogInViewController.swift; sourceTree = "<group>"; };
 		07AAF36B2360B1AF00899A96 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		292BBFD0B31FBA5EF66216FC /* Pods-childcare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-childcare.release.xcconfig"; path = "Target Support Files/Pods-childcare/Pods-childcare.release.xcconfig"; sourceTree = "<group>"; };
 		4DF06B6767740CA430FAA382 /* Pods_childcare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_childcare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,10 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				07182234236881B9004C602D /* AboutUsViewController.swift */,
-				07AAF3612360B03300899A96 /* GuardianSignUpViewController.swift */,
+				075462D123815C4900D1511D /* ProfileViewController.swift */,
 				07AAF3652360B09900899A96 /* BabySitterSignUpViewController.swift */,
 				07AAF3672360B0EA00899A96 /* BabySitterLogInViewController.swift */,
-				07AAF3692360B12C00899A96 /* GuardianLogInViewController.swift */,
 				07AAF36B2360B1AF00899A96 /* HomeViewController.swift */,
 				0723AEE5235F2CBB00B19AC2 /* ViewController.swift */,
 			);
@@ -249,12 +246,11 @@
 			files = (
 				07182235236881B9004C602D /* AboutUsViewController.swift in Sources */,
 				0723AEE6235F2CBB00B19AC2 /* ViewController.swift in Sources */,
-				07AAF3622360B03300899A96 /* GuardianSignUpViewController.swift in Sources */,
 				07AAF3662360B09900899A96 /* BabySitterSignUpViewController.swift in Sources */,
-				07AAF36A2360B12C00899A96 /* GuardianLogInViewController.swift in Sources */,
 				07AAF3682360B0EA00899A96 /* BabySitterLogInViewController.swift in Sources */,
 				07AAF36C2360B1AF00899A96 /* HomeViewController.swift in Sources */,
 				072A8C0B2362D5580000524F /* Utilities.swift in Sources */,
+				075462D223815C4900D1511D /* ProfileViewController.swift in Sources */,
 				0723AEE4235F2CBB00B19AC2 /* AppDelegate.swift in Sources */,
 				07358CDD23642A4C003065B0 /* Constants.swift in Sources */,
 			);
