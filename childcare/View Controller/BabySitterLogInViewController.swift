@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class BabySitterLogInViewController: UIViewController {
 
@@ -59,6 +60,7 @@ class BabySitterLogInViewController: UIViewController {
     }
     
     
+    /*
     @IBAction func LogInAction(_ sender: Any) {
         //let hvc = HomeViewController()
         //hvc.userdocid = EmailTextField.text!
@@ -82,15 +84,15 @@ class BabySitterLogInViewController: UIViewController {
                 //view.window?.makeKeyAndVisible()
             }
         }
-    }
+    }*/
     func checker()->Bool
     {
         let email=EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let pass=PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         Auth.auth().signIn(withEmail: email, password: pass) { (result, error) in
             if error != nil {
-                //self.ErrorLabel.text = error!.localizedDescription
-                //self.ErrorLabel.alpha = 1
+                self.ErrorLabel.text = error!.localizedDescription
+                self.ErrorLabel.alpha = 1
                 self.check = false
             }
             else
@@ -129,6 +131,40 @@ class BabySitterLogInViewController: UIViewController {
             //print(EmailTextField.text!)
             //print(homecontroller.userdocid)
         }
+        /*
+        let db = Firestore.firestore()
+        let userdocid = EmailTextField.text!
+        var usertype = String()
+        let docRef = db.collection("users").document(userdocid)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                //let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                usertype = document.data()?["usertype"] as! String
+            }
+        }
+        if(usertype=="Guardian")
+        {
+        if(segue.identifier == "seguecheck")
+        {
+            let homecontroller = segue.destination as! HomeViewController
+            homecontroller.userdocid = EmailTextField.text!
+            //print("Hello")
+            //print(EmailTextField.text!)
+            //print(homecontroller.userdocid)
+        }
+        }
+        else
+        {
+            if(segue.identifier == "seguecheck")
+            {
+                //let homecontroller = segue.destination as! BabyHomeViewController// HomeViewController
+               // homecontroller.userdocid = EmailTextField.text!
+                let babyhomeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? BabyHomeViewController
+                view.window?.rootViewController = babyhomeViewController
+                //view.window?.makeKeyAndVisible()
+            }
+        }*/
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         //print(check)

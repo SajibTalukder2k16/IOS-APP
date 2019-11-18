@@ -10,6 +10,8 @@ import UIKit
 
 class AboutUsViewController: UIViewController {
     
+    var userdocid = String()
+    
     struct Response: Codable { // or Decodable
         let name: String
         let roll: String
@@ -48,6 +50,14 @@ class AboutUsViewController: UIViewController {
     @IBOutlet weak var RiadImageView: UIImageView!
     
     @IBOutlet weak var AbirImageView: UIImageView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "abouttohome")
+        {
+            let homecontroller = segue.destination as! HomeViewController// ProfileViewController
+            homecontroller.userdocid = userdocid
+        }
+    }
     
     let sajibjsonurl = "https://api.myjson.com/bins/oed8u"
     let tithyjsonurl = "https://api.myjson.com/bins/lf77y"

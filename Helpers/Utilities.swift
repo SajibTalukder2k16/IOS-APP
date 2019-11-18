@@ -57,5 +57,11 @@ class Utilities {
         img.layer.borderColor = UIColor.black.cgColor
         img.layer.borderWidth = 4
     }
-    
+    static func styleLevel(_ lvl : UILabel)
+    {
+        lvl.layer.cornerRadius = 30
+        lvl.layer.borderColor = UIColor.black.cgColor
+        lvl.layer.masksToBounds = true
+        //lvl.clipsToBounds = true
+    }
 }

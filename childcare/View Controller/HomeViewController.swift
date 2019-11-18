@@ -79,7 +79,6 @@ class HomeViewController: UIViewController {
         }
     }
     @IBAction func AboutUsAction(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "seguepro", sender: "self")
     }
     /*
     // MARK: - Navigation
