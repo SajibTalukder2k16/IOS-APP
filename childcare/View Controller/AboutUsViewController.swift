@@ -52,11 +52,9 @@ class AboutUsViewController: UIViewController {
     @IBOutlet weak var AbirImageView: UIImageView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "abouttohome")
-        {
             let homecontroller = segue.destination as! HomeViewController// ProfileViewController
             homecontroller.userdocid = userdocid
-        }
+
     }
     
     let sajibjsonurl = "https://api.myjson.com/bins/oed8u"

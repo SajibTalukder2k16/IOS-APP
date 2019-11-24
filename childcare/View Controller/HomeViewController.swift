@@ -77,6 +77,17 @@ class HomeViewController: UIViewController {
         let profilecontroller = segue.destination as! ProfileViewController
         profilecontroller.userdocid = userdocid
         }
+        else if(segue.identifier == "hometodev")
+        {
+            let htd = segue.destination as! AboutUsViewController
+            htd.userdocid = userdocid
+        }
+        else if(segue.identifier == "hometomap")
+        {
+            let htm = segue.destination as! MapViewController
+            htm.userdocid = userdocid
+            
+        }
     }
     @IBAction func AboutUsAction(_ sender: UIButton) {
     }

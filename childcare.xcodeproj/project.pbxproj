@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0716E6B6238AF50F000F8CDB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716E6B5238AF50F000F8CDB /* MapViewController.swift */; };
 		07182235236881B9004C602D /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07182234236881B9004C602D /* AboutUsViewController.swift */; };
 		0723AEE4235F2CBB00B19AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723AEE3235F2CBB00B19AC2 /* AppDelegate.swift */; };
 		0723AEE6235F2CBB00B19AC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723AEE5235F2CBB00B19AC2 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0716E6B5238AF50F000F8CDB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		07182234236881B9004C602D /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		0723AEE0235F2CBB00B19AC2 /* childcare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = childcare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0723AEE3235F2CBB00B19AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		07AAF36D2360B1B900899A96 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0716E6B5238AF50F000F8CDB /* MapViewController.swift */,
 				077D937A2382C1DF0082D8AB /* BabyHomeViewController.swift */,
 				07182234236881B9004C602D /* AboutUsViewController.swift */,
 				075462D123815C4900D1511D /* ProfileViewController.swift */,
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0716E6B6238AF50F000F8CDB /* MapViewController.swift in Sources */,
 				07182235236881B9004C602D /* AboutUsViewController.swift in Sources */,
 				077D937B2382C1E00082D8AB /* BabyHomeViewController.swift in Sources */,
 				0723AEE6235F2CBB00B19AC2 /* ViewController.swift in Sources */,

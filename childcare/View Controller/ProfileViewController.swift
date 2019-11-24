@@ -68,12 +68,12 @@ class ProfileViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "protohome")
-        {
+       // if(segue.identifier == "protohome")
+       // {
             let homecontroller = segue.destination as! HomeViewController// ProfileViewController
             homecontroller.userdocid = userdocid
             //profilecontroller.userdocid = userdocid
-        }
+        //}
     }
     
 
