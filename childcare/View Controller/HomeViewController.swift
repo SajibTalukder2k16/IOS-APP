@@ -71,6 +71,11 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func DevTapped(_ sender: Any) {
+        
+        //let htd = segue.destination as! AboutUsViewController
+        //htd.userdocid = userdocid
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "seguepro")
         {
@@ -89,8 +94,7 @@ class HomeViewController: UIViewController {
             
         }
     }
-    @IBAction func AboutUsAction(_ sender: UIButton) {
-    }
+
     /*
     // MARK: - Navigation
 

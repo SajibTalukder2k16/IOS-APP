@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070276E0239794DB00B252D6 /* FindNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070276DF239794DB00B252D6 /* FindNowViewController.swift */; };
 		0716E6B6238AF50F000F8CDB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0716E6B5238AF50F000F8CDB /* MapViewController.swift */; };
 		07182235236881B9004C602D /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07182234236881B9004C602D /* AboutUsViewController.swift */; };
 		0723AEE4235F2CBB00B19AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723AEE3235F2CBB00B19AC2 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070276DF239794DB00B252D6 /* FindNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNowViewController.swift; sourceTree = "<group>"; };
 		0716E6B5238AF50F000F8CDB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		07182234236881B9004C602D /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		0723AEE0235F2CBB00B19AC2 /* childcare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = childcare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 		07AAF36D2360B1B900899A96 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				070276DF239794DB00B252D6 /* FindNowViewController.swift */,
 				0716E6B5238AF50F000F8CDB /* MapViewController.swift */,
 				077D937A2382C1DF0082D8AB /* BabyHomeViewController.swift */,
 				07182234236881B9004C602D /* AboutUsViewController.swift */,
@@ -256,6 +259,7 @@
 				0723AEE6235F2CBB00B19AC2 /* ViewController.swift in Sources */,
 				07AAF3662360B09900899A96 /* BabySitterSignUpViewController.swift in Sources */,
 				07AAF3682360B0EA00899A96 /* BabySitterLogInViewController.swift in Sources */,
+				070276E0239794DB00B252D6 /* FindNowViewController.swift in Sources */,
 				07AAF36C2360B1AF00899A96 /* HomeViewController.swift in Sources */,
 				072A8C0B2362D5580000524F /* Utilities.swift in Sources */,
 				075462D223815C4900D1511D /* ProfileViewController.swift in Sources */,
