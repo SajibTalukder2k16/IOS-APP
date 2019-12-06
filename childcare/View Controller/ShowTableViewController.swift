@@ -1,27 +1,26 @@
 //
-//  FindNowViewController.swift
+//  ShowTableViewController.swift
 //  childcare
 //
-//  Created by Sajib Talukder on 4/12/19.
+//  Created by Sajib Talukder on 6/12/19.
 //  Copyright © 2019 Sajib Talukder. All rights reserved.
 //
 
 import UIKit
-import FirebaseCore
 import FirebaseFirestore
+import FirebaseCore
 
-class FindNowViewController: UIViewController {
-    var i=0
-    
+class ShowTableViewController: UIViewController {
+
     @IBOutlet weak var AvailButton3: UIButton!
     @IBOutlet weak var AvailButton2: UIButton!
     @IBOutlet weak var AvailButton1: UIButton!
     var db:Firestore!
     override func viewDidLoad() {
-        super.viewDidLoad()
         AvailButton1.backgroundColor = UIColor.green
         AvailButton2.backgroundColor = UIColor.green
         AvailButton3.backgroundColor = UIColor.green
+        super.viewDidLoad()
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
@@ -31,7 +30,7 @@ class FindNowViewController: UIViewController {
     private func getMultiple()->Void {
         var list = [[String:Any]]()
         print(type (of: list))
-        db.collection("users").whereField("usertype", isEqualTo: "BabySitter").order(by: "rating")
+        db.collection("users").whereField("usertype", isEqualTo: "BabySitter")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
@@ -71,7 +70,7 @@ class FindNowViewController: UIViewController {
         }
     }
     
-    @IBAction func AvailButton3(_ sender: Any) {
+    @IBAction func Avail3Action(_ sender: Any) {
         if (AvailButton3.backgroundColor == UIColor.green)
         {
             AvailButton3.backgroundColor = UIColor.red
@@ -79,11 +78,10 @@ class FindNowViewController: UIViewController {
         }
         else
         {
-            AvailButton3.setTitle("Available", for: .normal)
             AvailButton3.backgroundColor = UIColor.green
+            AvailButton3.setTitle("Available", for: .normal)
         }
     }
-    
     
     /*
     // MARK: - Navigation

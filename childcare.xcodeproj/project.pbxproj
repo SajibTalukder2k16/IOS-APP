@@ -20,6 +20,7 @@
 		07358CDD23642A4C003065B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07358CDC23642A4C003065B0 /* Constants.swift */; };
 		075462D223815C4900D1511D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075462D123815C4900D1511D /* ProfileViewController.swift */; };
 		077D937B2382C1E00082D8AB /* BabyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D937A2382C1DF0082D8AB /* BabyHomeViewController.swift */; };
+		07A5F92423998069000BFAFC /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5F92323998069000BFAFC /* ShowTableViewController.swift */; };
 		07AAF3662360B09900899A96 /* BabySitterSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF3652360B09900899A96 /* BabySitterSignUpViewController.swift */; };
 		07AAF3682360B0EA00899A96 /* BabySitterLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF3672360B0EA00899A96 /* BabySitterLogInViewController.swift */; };
 		07AAF36C2360B1AF00899A96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AAF36B2360B1AF00899A96 /* HomeViewController.swift */; };
@@ -42,6 +43,7 @@
 		07358CDC23642A4C003065B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		075462D123815C4900D1511D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		077D937A2382C1DF0082D8AB /* BabyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyHomeViewController.swift; sourceTree = "<group>"; };
+		07A5F92323998069000BFAFC /* ShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewController.swift; sourceTree = "<group>"; };
 		07AAF3652360B09900899A96 /* BabySitterSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterSignUpViewController.swift; sourceTree = "<group>"; };
 		07AAF3672360B0EA00899A96 /* BabySitterLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabySitterLogInViewController.swift; sourceTree = "<group>"; };
 		07AAF36B2360B1AF00899A96 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		07AAF36D2360B1B900899A96 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				07A5F92323998069000BFAFC /* ShowTableViewController.swift */,
 				070276DF239794DB00B252D6 /* FindNowViewController.swift */,
 				0716E6B5238AF50F000F8CDB /* MapViewController.swift */,
 				077D937A2382C1DF0082D8AB /* BabyHomeViewController.swift */,
@@ -258,6 +261,7 @@
 				077D937B2382C1E00082D8AB /* BabyHomeViewController.swift in Sources */,
 				0723AEE6235F2CBB00B19AC2 /* ViewController.swift in Sources */,
 				07AAF3662360B09900899A96 /* BabySitterSignUpViewController.swift in Sources */,
+				07A5F92423998069000BFAFC /* ShowTableViewController.swift in Sources */,
 				07AAF3682360B0EA00899A96 /* BabySitterLogInViewController.swift in Sources */,
 				070276E0239794DB00B252D6 /* FindNowViewController.swift in Sources */,
 				07AAF36C2360B1AF00899A96 /* HomeViewController.swift in Sources */,

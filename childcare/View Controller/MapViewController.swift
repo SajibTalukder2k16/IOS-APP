@@ -36,13 +36,6 @@ class MapViewController: UIViewController {
         checkLocationServices()
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //if(segue.identifier == "abouttohome")
-        //{
-            let homecontroller = segue.destination as! HomeViewController// ProfileViewController
-            homecontroller.userdocid = userdocid
-        //}
-    }
     
     func addPin() {
         let jsonURL = "https://api.myjson.com/bins/11xrp2"

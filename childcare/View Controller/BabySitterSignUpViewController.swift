@@ -184,7 +184,7 @@ class BabySitterSignUpViewController: UIViewController {
                        // newdoc.setData(["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype, "password":password,"uid":newdoc.documentID])
                     if(utype=="BabySitter")
                     {
-                    newdoc.setData(["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype, "password":password,"uid":newdoc.documentID] , completion: { (error) in
+                        newdoc.setData(["name":name,"email":email,"mobile":mobile,"age":age,"education":edu,"gender":gender,"usertype":utype, "password":password,"rating":5, "uid":newdoc.documentID] , completion: { (error) in
                         if error != nil{
                             self.showError("Error saving User data.")
                         }

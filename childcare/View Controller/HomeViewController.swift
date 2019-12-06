@@ -19,11 +19,10 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var FindNowButton: UIButton!
     
-    @IBOutlet weak var HistoryButton: UIButton!
     
     @IBOutlet weak var TopRatedButton: UIButton!
     
-    var userdocid = String()
+    var userdocid = "sajib@gmail.com"//String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +48,11 @@ class HomeViewController: UIViewController {
         FindNowButton.layer.borderColor = UIColor.black.cgColor
         FindNowButton.layer.borderWidth = 4
         
-        HistoryButton.layer.cornerRadius = 30
-        HistoryButton.layer.cornerRadius =  HistoryButton.frame.size.width / 2
-        HistoryButton.clipsToBounds = true
-        HistoryButton.layer.borderColor = UIColor.black.cgColor
-        HistoryButton.layer.borderWidth = 4
+//        HistoryButton.layer.cornerRadius = 30
+//        HistoryButton.layer.cornerRadius =  HistoryButton.frame.size.width / 2
+//        HistoryButton.clipsToBounds = true
+//        HistoryButton.layer.borderColor = UIColor.black.cgColor
+//        HistoryButton.layer.borderWidth = 4
         
         TopRatedButton.layer.cornerRadius = 30
         TopRatedButton.layer.cornerRadius =  TopRatedButton.frame.size.width / 2
